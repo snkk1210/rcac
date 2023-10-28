@@ -8,8 +8,8 @@
 ```
 sam build
 sam deploy -g --parameter-overrides \
-    ParameterKey=CHANNELNAME,ParameterValue="" \
-    ParameterKey=HOOKURL,ParameterValue=""
+    ParameterKey=CHANNELNAME,ParameterValue="#<Channel Name>" \
+    ParameterKey=HOOKURL,ParameterValue="https://hooks.slack.com/services/<Webhook URL for Slack>"
 ```
 
 - Delete
