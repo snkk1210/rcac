@@ -1,5 +1,7 @@
 # rcac
 
+当月の AWS コストを Slack に通知するアプリケーション ( 準備中 )
+
 ## Example AWS Deploy
 
 - Deploy
