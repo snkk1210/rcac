@@ -19,8 +19,8 @@ Resources:
         - CostExplorerReadOnlyPolicy: {}
       Environment:
         Variables:
-          channelName: CHANNELNAME
-          hookURL: HOOKURL
+          channelName: !Ref CHANNELNAME
+          hookURL: !Ref HOOKURL
       Events:
         ScheduledFunction:
           Type: Schedule
