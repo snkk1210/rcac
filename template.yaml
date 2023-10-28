@@ -1,3 +1,13 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: RCAC
+
+Parameters:
+  CHANNELNAME:
+    Type: String
+  HOOKURL:
+    Type: String
+
 Resources:
   RCACFunction:
     Type: AWS::Serverless::Function
