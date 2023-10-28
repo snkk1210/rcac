@@ -97,7 +97,7 @@ def post_to_slack(hook_url, channel_name, cost, day):
                 "text": "<!here>",
                 "fields": [
                     {
-                        "title": "MONTHLY COST",
+                        "title": "Total",
                         "value": "USD %s" % (cost),
                         "short": True
                     }
