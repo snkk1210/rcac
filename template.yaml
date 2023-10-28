@@ -5,6 +5,10 @@ Resources:
       CodeUri: src/rcac/
       Handler: app.lambda_handler
       Runtime: python3.11
+      Environment:
+        Variables:
+          channelName: CHANNELNAME
+          hookURL: HOOKURL
       Events:
         ScheduledFunction:
           Type: Schedule
