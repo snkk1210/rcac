@@ -15,6 +15,8 @@ Resources:
       CodeUri: src/rcac/
       Handler: app.lambda_handler
       Runtime: python3.11
+      Policies:
+        - arn:aws:iam::aws:policy/service-role/AWSCostAndUsageReportAutomationPolicy
       Environment:
         Variables:
           channelName: CHANNELNAME
