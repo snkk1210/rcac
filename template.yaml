@@ -16,7 +16,7 @@ Resources:
       Handler: app.lambda_handler
       Runtime: python3.11
       Policies:
-        - arn:aws:iam::aws:policy/service-role/AWSCostAndUsageReportAutomationPolicy
+        - CostExplorerReadOnlyPolicy: {}
       Environment:
         Variables:
           channelName: CHANNELNAME
