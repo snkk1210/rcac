@@ -15,5 +15,5 @@ Resources:
           Properties:
             Schedule: cron(0 1 * * ? *)
             Enabled: true
-            Name: TestSchedule
+            Name: RCACSchedule
             Description: rcac schedule
