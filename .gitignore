@@ -166,3 +166,7 @@ cython_debug/
 # key file
 *.key
 *.pub
+
+# SAM
+samconfig.toml
+**/.aws-sam/*
