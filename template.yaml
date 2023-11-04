@@ -7,6 +7,9 @@ Parameters:
     Type: String
   HOOKURL:
     Type: String
+  CRON:
+    Type: String
+    Default: cron(0 1 * * ? *)
 
 Resources:
   RCACFunction:
@@ -25,7 +28,7 @@ Resources:
         ScheduledFunction:
           Type: Schedule
           Properties:
-            Schedule: cron(0 1 * * ? *)
+            Schedule: !Ref CRON
             Enabled: true
             Name: RCACSchedule
             Description: rcac schedule
