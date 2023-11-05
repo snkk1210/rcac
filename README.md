@@ -27,3 +27,17 @@ sam deploy -g --parameter-overrides \
 ```
 sam delete
 ```
+
+## Command Line Usage
+
+- Set environmental variables
+```
+export channelName="#<Channel Name>"
+export hookURL="https://hooks.slack.com/services/<Webhook URL for Slack>"
+```
+
+- Execute
+```
+cd bin
+python main.py
+```
