@@ -30,6 +30,7 @@ sam delete
 
 ## Command Line Usage
 
+### 1. Notify to Slack
 - Set environmental variables
 ```
 export channelName="#<Channel Name>"
@@ -39,5 +40,13 @@ export hookURL="https://hooks.slack.com/services/<Webhook URL for Slack>"
 - Execute
 ```
 cd bin
-python main.py
+python main.py -t 1
+```
+
+### 2. Notify to stdout
+
+- Execute
+```
+cd bin
+python main.py -t 2
 ```
