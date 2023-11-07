@@ -15,9 +15,7 @@ def lambda_handler(event, context):
     CHANNEL_NAME = os.environ['channelName']
     HOOK_URL = os.environ['hookURL']
 
-    fdocm = get_first_day_of_current_month()
-    cost = get_cost_in_range(str(fdocm), str(datetime.date.today()))
-    cost_amount = cost['ResultsByTime'][0]['Total']['NetUnblendedCost']['Amount']
+    cost_amount = retrieve_cost_today()
 
     post_to_slack(HOOK_URL, CHANNEL_NAME, cost_amount, datetime.date.today())
 
@@ -67,6 +65,24 @@ def get_cost_in_range(start, end):
         ],
     )
     return cost
+
+def retrieve_cost_today():
+    """
+    Retrieve Today's AWS Costs
+
+    Parameters
+    ----------
+    none
+
+    Returns
+    -------
+    cost_amount : int
+        Today's AWS Costs ( US dollar )
+    """
+    fdocm = get_first_day_of_current_month()
+    cost = get_cost_in_range(str(fdocm), str(datetime.date.today()))
+    cost_amount = cost['ResultsByTime'][0]['Total']['NetUnblendedCost']['Amount']
+    return cost_amount
 
 def post_to_slack(hook_url, channel_name, cost, day):
     """

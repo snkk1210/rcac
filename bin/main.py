@@ -18,7 +18,8 @@ if __name__ == '__main__':
     if args.type == "1":
         app.lambda_handler(" ", " ")
     elif args.type == "2":
-        sys.exit(1)
+        cost_amount = app.retrieve_cost_today()
+        print("USD: %s" % (cost_amount))
     else:
         print('Invalid argument.')
         sys.exit(1)
