@@ -1,6 +1,8 @@
 # rcac
 
-当月の AWS コストを Slack に通知するアプリケーション
+当月の AWS コストを Slack に通知するアプリケーションです。  
+
+AWS 上に EventBridge + Lambda のコンポーネントを使ってデプロイできる他、 CLI での使用も可能です。
 
 ## Example AWS Deploy
 
